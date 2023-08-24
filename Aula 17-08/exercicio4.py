@@ -1,21 +1,7 @@
 """
-Escreva um modelo para representar uma lâmpada que está à venda em um supermercado.
-Que atributos devem ser representados por este modelo?
+Inclua, no modelo Lampada, uma operação estáLigada que retorne verdadeiro se a lâmpada estiver ligada e falso
+, caso contrário.
 """
-
-"""
-    def: Isso define uma função chamada __init__, que é o construtor da classe.
-__init__ é uma função especial em Python que é usada dentro de uma classe para criar objetos dessa classe.
-Quando você cria um objeto, o __init__ é executado automaticamente e define as características (atributos)
-desse objeto.
-"""
-
-"""
-self: É uma convenção em Python para referenciar a própria instância da classe. Ele é um parâmetro 
-obrigatório em todos os métodos de instância da classe, incluindo o construtor. Ele permite que você
-acesse e modifique os atributos da instância dentro do método.   
-"""
-
 
 class Lampada:
     def __init__(self, marca, tipoDeLampada, temperaturaDaLampada, preco, voltagem, ligada):
@@ -34,6 +20,12 @@ class Lampada:
             self.ligada = True
             return "Ligando lampada..."
 
+    def esta_ligada(self):
+        if self.ligada:
+            return True
+        else:
+            return False
+
     def mostrar_preco(self):
         return f"Preço da lampada: R$ {self.preco:.2f}"
 
@@ -43,5 +35,8 @@ lampadaTeste = Lampada(marca="teste", tipoDeLampada="LED", temperaturaDaLampada=
 
 print(lampadaTeste.tipoDeLampada)
 print(lampadaTeste.voltagem)
-print(lampadaTeste.mudarEstado())
 print(lampadaTeste.mostrar_preco())
+print(lampadaTeste.esta_ligada())
+print(lampadaTeste.mudarEstado())
+print(lampadaTeste.esta_ligada())
+
