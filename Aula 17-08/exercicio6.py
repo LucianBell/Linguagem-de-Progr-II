@@ -51,9 +51,9 @@ jogadores_time = ["Jogador1", "Jogador2", "Jogador3"]
 time = TimeBasqueteNBA("Time Teste", "Conferência Leste", "Cidade Teste", 5, jogadores_time)
 
 print(time.nome)
-print(time.listar_jogadores())
+time.listar_jogadores()
 print(time.adicionar_jogador("Jogador4"))
-print(time.listar_jogadores())
+time.listar_jogadores()
 print(time.remover_jogador("Jogador2"))
 print(time.esta_nos_playoffs())
-print(time.mostrar_infos())
+time.mostrar_infos()
