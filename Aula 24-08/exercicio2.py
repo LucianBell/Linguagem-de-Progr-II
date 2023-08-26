@@ -37,3 +37,9 @@ class Pessoa:
         print(f"Nome: {self.__nome}\nIdade: {self.__idade}\nAltura: {self.__altura}")
 
 
+pessoa_teste = Pessoa("Axl", 21, 178)
+pessoa_teste.mostrar_dados()
+pessoa_teste.set_altura(182)
+pessoa_teste.set_idade(19)
+pessoa_teste.set_nome("Slash")
+pessoa_teste.mostrar_dados()
