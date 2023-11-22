@@ -24,7 +24,7 @@ class TerrestrialEnemy(Enemy):
         elif self.which_skin == 2:
             self.speed = 1.5
         elif self.which_skin == 3:
-            self.speed = 2
+            self.speed = 1.5
 
         while self.x < 0:
             try:
